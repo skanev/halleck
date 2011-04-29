@@ -1,18 +1,18 @@
 $:.unshift 'lib'
-
-require 'halleck'
+require 'halleck/init'
 
 require 'capybara'
 require 'capybara/cucumber'
 require 'rspec'
 require 'cucumber/rspec/doubles'
 
+require 'halleck'
+
 Dir[File.join(File.dirname(__FILE__), '..', '..', 'spec', 'support', '**', '*.rb')].each { |file| load file }
 
-set :environment, :test
+App.set :environment, :test
 
 Capybara.app = App
-
 Database.use Test::MongoDB.database
 
 Before do
