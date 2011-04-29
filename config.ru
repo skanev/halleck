@@ -1,7 +1,5 @@
-require 'bundler'
-Bundler.require
-
 $:.unshift 'lib'
+require 'halleck/init'
 require 'halleck'
 
 run Halleck::App

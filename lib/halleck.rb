@@ -1,3 +1,5 @@
+require 'halleck/init'
+
 require 'uri'
 require 'mongo'
 require 'sinatra/base'
