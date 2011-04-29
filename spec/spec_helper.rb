@@ -5,4 +5,4 @@ Dir[File.join(File.dirname(__FILE__), 'support', '**', '*.rb')].each { |file| lo
 
 set :environment, :test
 
-Halleck::Database.use Test::MongoDB.database
+Database.use Test::MongoDB.database

@@ -11,9 +11,9 @@ Dir[File.join(File.dirname(__FILE__), '..', '..', 'spec', 'support', '**', '*.rb
 
 set :environment, :test
 
-Capybara.app = Halleck::App
+Capybara.app = App
 
-Halleck::Database.use Test::MongoDB.database
+Database.use Test::MongoDB.database
 
 Before do
   Test::MongoDB.reset
