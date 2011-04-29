@@ -5,6 +5,8 @@ gem 'sinatra'
 gem 'bson_ext'
 gem 'mongo'
 
+gem 'haml'
+
 group :test do
   gem 'rack-test'
   gem 'rspec'
