@@ -13,7 +13,7 @@ module Halleck
 
       def with_mac(mac)
         document = collection.find_one 'macs' => mac
-        User.new name: document['name']
+        User.new name: document['name'] if document
       end
 
       private

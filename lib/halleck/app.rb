@@ -1,11 +1,10 @@
 module Halleck
   class App < Sinatra::Base
     get '/' do
-      connection = Mongo::Connection.from_uri(ENV['MONGOHQ_URL'])
-      path = URI.parse(ENV['MONGOHQ_URL']).path.gsub(/^\//, '')
-      db = connection.db path
-
-      db['quotes'].find_one['text']
+      Halleck::Gateway.active_macs.
+        map { |mac| Halleck::User.with_mac(mac).try(:name) }.
+        compact.
+        join("\n")
     end
   end
 end
