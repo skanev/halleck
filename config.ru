@@ -4,4 +4,4 @@ Bundler.require
 $:.unshift 'lib'
 require 'halleck'
 
-run Halleck
+run Halleck::App
