@@ -22,4 +22,3 @@ end
 But '"$name" is not currenly visiting' do |name|
   page.should have_no_content(name)
 end
-

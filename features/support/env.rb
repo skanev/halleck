@@ -13,7 +13,6 @@ Dir[File.join(File.dirname(__FILE__), '..', '..', 'spec', 'support', '**', '*.rb
 App.set :environment, :test
 
 Capybara.app = App
-Database.use Test::MongoDB.database
 
 Before do
   Test::MongoDB.reset
