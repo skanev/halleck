@@ -20,4 +20,18 @@ describe User do
 
     User.with_mac('00:00:00:00:00:01').name.should == 'Halleck'
   end
+
+  it "allows user regisration via Twitter" do
+    user = User.register name: 'Paul Atreides', twitter_id: 1
+
+    user.name.should eq 'Paul Atreides'
+    user.twitter_id.should eq 1
+  end
+
+  it "can retrieve a user by id" do
+    user = User.register name: 'Paul Atreides', twitter_id: 1
+    id   = user.id
+
+    User.find(id).name.should eq 'Paul Atreides'
+  end
 end
