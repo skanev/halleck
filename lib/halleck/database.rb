@@ -1,10 +1,6 @@
 module Database
   extend self
 
-  def use(database)
-    @database = database
-  end
-
   def collection(collection_name)
     database.collection(collection_name)
   end
@@ -12,7 +8,6 @@ module Database
   private
 
   def database
-    raise "No MongoDB database specified" unless @database
-    @database
+    Configuration.database
   end
 end
