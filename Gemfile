@@ -7,6 +7,10 @@ gem 'mongo'
 
 gem 'haml'
 
+group :development do
+  gem 'guard-rspec'
+end
+
 group :test do
   gem 'rack-test'
   gem 'rspec'

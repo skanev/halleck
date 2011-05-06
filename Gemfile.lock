@@ -29,6 +29,10 @@ GEM
       rake (>= 0.8.7)
     gherkin (2.3.6)
       json (>= 1.4.6)
+    guard (0.3.4)
+      thor (~> 0.14.6)
+    guard-rspec (0.3.1)
+      guard (>= 0.2.2)
     haml (3.1.1)
     json (1.5.1)
     json_pure (1.5.1)
@@ -61,6 +65,7 @@ GEM
       rack (~> 1.1)
       tilt (>= 1.2.2, < 2.0)
     term-ansicolor (1.0.5)
+    thor (0.14.6)
     tilt (1.3)
     xpath (0.1.4)
       nokogiri (~> 1.3)
@@ -72,6 +77,7 @@ DEPENDENCIES
   bson_ext
   capybara
   cucumber
+  guard-rspec
   haml
   launchy
   mongo
