@@ -6,6 +6,7 @@ gem 'bson_ext'
 gem 'mongo'
 
 gem 'haml'
+gem 'oa-oauth'
 
 group :development do
   gem 'guard-rspec'
